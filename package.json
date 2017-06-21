@@ -1,0 +1,19 @@
+{
+  "name": "tff-web",
+  "version": "0.0.0",
+  "description": "A WP Theme for Three for Flavin official site",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yadex205/tff-web.git"
+  },
+  "author": "Kanon Kakuno <yadex205@outlook.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yadex205/tff-web/issues"
+  },
+  "homepage": "https://github.com/yadex205/tff-web#readme",
+  "private": true
+}
