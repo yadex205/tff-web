@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "description": "A WP Theme for Three for Flavin official site",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bootstrap": "gulp bootstrap",
+    "live": "gulp live",
+    "docker:start": "docker-compose up -d",
+    "docker:stop": "docker-compose stop",
+    "docker:destroy": "docker-compose down -v"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,17 @@
     "url": "https://github.com/yadex205/tff-web/issues"
   },
   "homepage": "https://github.com/yadex205/tff-web#readme",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "node-pathname": "^0.2.0",
+    "require-dir": "^0.3.2",
+    "rimraf": "^2.6.1",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.12"
+  }
 }
