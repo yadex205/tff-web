@@ -1,0 +1,22 @@
+{
+  "name": "tff-web",
+  "description": "A WP Theme for Three for Flavin official site",
+  "main": "",
+  "authors": [
+    "Kanon Kakuno <yadex205@outlook.jp>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/yadex205/tff-web",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "^2.3.4",
+    "font-awesome": "^4.7.0"
+  }
+}
