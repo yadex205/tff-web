@@ -7,5 +7,5 @@ const rimraf = require('rimraf')
  */
 
 gulp.task('clean', done => {
-  rimraf('theme', done)
+  rimraf('theme/**/*', done)
 })
