@@ -7,7 +7,11 @@
  */
 
 const runSequence = require('run-sequence')
+const plumber     = require('gulp-plumber')
 const sass        = require('gulp-sass')
+const concat      = require('gulp-concat')
+const sourcemaps  = require('gulp-sourcemaps')
+const gulpIf      = require('gulp-if')
 
 const SOURCE_ROOT = Node.root.join('src')
 const THEME_ROOT  = Node.root.join('theme')
@@ -54,6 +58,10 @@ gulp.task('build:src:scss', () => {
 
 gulp.task('build:src:js', () => {
   gulp.src(SOURCE_JS.toString())
+    .pipe(plumber())
+    .pipe(gulpIf(!Node.env.isProduction, sourcemaps.init()))
+    .pipe(concat('site.js'))
+    .pipe(gulpIf(!Node.env.isProduction, sourcemaps.write()))
     .pipe(gulp.dest(DEST_JS.toString()))
     .pipe(browserSync.stream())
 })
