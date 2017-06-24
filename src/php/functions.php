@@ -7,4 +7,4 @@ function threeforflavin_load_libs() {
     }
 }
 
-add_action( 'after_setup_theme', 'threeforflavin_load_libs' );
+add_action( 'after_setup_theme', 'threeforflavin_load_libs', 0 );
