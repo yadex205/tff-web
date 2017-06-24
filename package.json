@@ -5,7 +5,7 @@
   "scripts": {
     "bootstrap": "gulp bootstrap",
     "live": "gulp live",
-    "docker:start": "docker-compose up -d",
+    "docker:start": "PHP_ENV=development docker-compose up -d",
     "docker:stop": "docker-compose stop",
     "docker:status": "docker-compose ps",
     "docker:destroy": "docker-compose down -v"
