@@ -8,7 +8,8 @@
     "docker:start": "PHP_ENV=development docker-compose up -d",
     "docker:stop": "docker-compose stop",
     "docker:status": "docker-compose ps",
-    "docker:destroy": "docker-compose down -v"
+    "docker:destroy": "docker-compose down -v",
+    "lint:scss": "sass-lint -v"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,8 @@
     "node-pathname": "^0.2.0",
     "require-dir": "^0.3.2",
     "rimraf": "^2.6.1",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "sass-lint": "^1.10.2"
   },
   "dependencies": {
     "browser-sync": "^2.18.12"
