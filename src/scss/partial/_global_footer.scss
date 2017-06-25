@@ -1,0 +1,30 @@
+.global-footer-wrapper {
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.global-footer {
+  @include top-level-view;
+  font-size: 14px;
+
+  .copyright-wrapper {
+    padding: 16px;
+    text-align: center;
+  }
+}
+
+.global-footer-nav-wrapper {
+  padding: 16px;
+
+  .global-footer-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    list-style-type: none;
+
+    .nav-item {
+      flex: auto;
+      text-align: center;
+    }
+  }
+}

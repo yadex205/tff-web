@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.global {
+  color: $color-black;
+  font-family: sans-serif;
+
+  div {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    position: relative;
+    border-bottom: 1px dashed $color-gray;
+    color: inherit;
+    text-decoration: none;
+
+
+    &::before {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      width: 0;
+      height: 0;
+      border-bottom: 3px solid $color-flavin;
+      content: '';
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+        transition: width 0.3s;
+      }
+    }
+  }
+}
