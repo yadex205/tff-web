@@ -6,12 +6,14 @@
  * bower で取得したライブラリも /theme 以下に配置します。
  */
 
-const runSequence = require('run-sequence')
-const plumber     = require('gulp-plumber')
-const sass        = require('gulp-sass')
-const concat      = require('gulp-concat')
-const sourcemaps  = require('gulp-sourcemaps')
-const gulpIf      = require('gulp-if')
+const runSequence  = require('run-sequence')
+const plumber      = require('gulp-plumber')
+const sass         = require('gulp-sass')
+const concat       = require('gulp-concat')
+const sourcemaps   = require('gulp-sourcemaps')
+const gulpIf       = require('gulp-if')
+const postcss      = require('gulp-postcss')
+const autoprefixer = require('autoprefixer')
 
 const SOURCE_ROOT = Node.root.join('src')
 const THEME_ROOT  = Node.root.join('theme')
@@ -51,7 +53,10 @@ gulp.task('build:src:php', () => {
 
 gulp.task('build:src:scss', () => {
   gulp.src(SOURCE_SCSS.toString())
+    .pipe(gulpIf(!Node.env.isProduction, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(gulpIf(!Node.env.isProduction, sourcemaps.write()))
     .pipe(gulp.dest(DEST_SCSS.toString()))
     .pipe(browserSync.stream())
 })
