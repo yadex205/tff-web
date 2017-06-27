@@ -11,5 +11,5 @@ rules:
     - size: 2
   property-sort-order:
     - 2
-    - order: 'recess'
+    - order: 'smacss'
       ignore-custom-properties: true

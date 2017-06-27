@@ -23,11 +23,13 @@
   "homepage": "https://github.com/yadex205/tff-web#readme",
   "private": true,
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
     "bower": "^1.8.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
     "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "node-pathname": "^0.2.0",
