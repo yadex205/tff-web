@@ -25,6 +25,7 @@ $color-gray: lighten($color-black, 30%);
 @import 'partial/base';
 
 .global {
+  @import 'partial/global_header';
   @import 'partial/global_footer';
   @import 'partial/global_popup_nav';
 }

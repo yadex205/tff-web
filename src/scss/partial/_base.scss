@@ -16,12 +16,11 @@ body {
     padding: 0;
   }
 
-  a {
+  a:not(.plain) {
     position: relative;
     border-bottom: 1px dashed $color-gray;
     color: inherit;
     text-decoration: none;
-
 
     &::before {
       display: inline-block;
