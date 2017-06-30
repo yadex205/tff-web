@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "vue": "^2.3.4",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "damion-googlefont": "*"
   }
 }

@@ -80,6 +80,7 @@ gulp.task('build:src:image', () => {
 gulp.task('build:bower', [
   'build:bower:vue',
   'build:bower:font-awesome',
+  'build:bower:damion-googlefont',
 ])
 
 gulp.task('build:bower:vue', () => {
@@ -90,4 +91,9 @@ gulp.task('build:bower:vue', () => {
 gulp.task('build:bower:font-awesome', () => {
   gulp.src(BOWER_FA_SRC.toString())
     .pipe(gulp.dest(BOWER_FA_DST.toString()))
+})
+
+gulp.task('build:bower:damion-googlefont', () => {
+  gulp.src(BOWER_ROOT.join('damion-googlefont/Damion-Regular.ttf').toString())
+    .pipe(gulp.dest(THEME_ROOT.join('fonts').toString()))
 })

@@ -20,6 +20,7 @@ $color-flavin: #dcdc42;
 $color-black: ntsc-coef-grayscale($color-flavin);
 $color-gray: lighten($color-black, 30%);
 
+@import 'partial/fonts';
 @import 'partial/mixins';
 @import 'partial/base';
 
