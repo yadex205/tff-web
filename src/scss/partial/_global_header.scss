@@ -8,12 +8,32 @@
   @include top-level-view;
 }
 
-.global-header-logo-wrapper {}
+.global-header-primary-row {
+  display: flex;
+  flex-direction: row;
+}
 
-.global-header-pc-nav-wrapper {}
+.global-header-logo-wrapper {
+  width: 160px;
+  height: 80px;
+
+  &::before {
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 100%;
+    content: '';
+    vertical-align: middle;
+  }
+
+  .global-header-logo {
+    vertical-align: middle;
+  }
+}
 
 .global-header-pc-nav-primary {
   display: flex;
+  flex: auto;
   flex-direction: row;
   padding: 0;
   list-style-type: none;
@@ -52,11 +72,15 @@
   }
 }
 
+.global-header-secondary-row {
+  margin-top: 12px;
+}
+
 .global-header-pc-nav-secondary {
   display: flex;
   flex-direction: row;
   width: 280px;
-  margin: 20px 0 0 auto;
+  margin: 0 0 0 auto;
   padding: 0;
   list-style-type: none;
 
@@ -65,16 +89,15 @@
 
     a {
       display: block;
-      padding: 10px 10px 0;
+      padding: 4px 10px;
       border-width: 3px 3px 0;
       border-style: solid;
-      border-radius: 60% 30% 0 0;
+      border-radius: 12px 12px 0 0;
       border-color: $color-flavin;
       background-color: lighten($color-flavin, 30%);
       color: lighten($color-black, 6%);
       font-size: 14px;
       font-weight: bolder;
-      line-height: 24px;
     }
   }
 }
