@@ -1,3 +1,37 @@
 .global-popup-nav-wrapper {
   display: none;
 }
+
+.global-popup-nav-trigger {
+  display: flex;
+  position: fixed;
+  bottom: 48px;
+  left: 48px;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+
+  background-color: $color-flavin;
+  color: $color-black;
+  font-size: 28px;
+
+  .icon-menu-shown {
+    display: none;
+  }
+
+  &.menu-shown {
+    border-radius: 32px;
+
+    .icon-menu-hidden {
+      display: none;
+    }
+
+    .icon-menu-shown {
+      display: inline;
+    }
+  }
+}
