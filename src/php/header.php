@@ -16,15 +16,13 @@
 
           <nav class="global-header-primary-row">
             <div class="global-header-logo-wrapper">
-              <a href="/" class="plain">
-                <img alt="logo"
-                     class="global-header-logo"
-                     src="<?php echo get_header_logo_uri(); ?>"
-                     srcset="<?php echo get_header_logo_uri() ?> 1x,
-                          <?php echo get_header_logo_uri( '@2x' ) ?> 2x,
-                          <?php echo get_header_logo_uri( '@3x' ) ?> 3x"
-                />
-              </a>
+              <a href="/" class="plain"><img alt="logo"
+                                             class="global-header-logo"
+                                             src="<?php echo get_header_logo_uri(); ?>"
+                                             srcset="<?php echo get_header_logo_uri() ?> 1x,
+                                                  <?php echo get_header_logo_uri( '@2x' ) ?> 2x,
+                                                  <?php echo get_header_logo_uri( '@3x' ) ?> 3x"
+                                        /></a>
             </div>
 
             <ul class="global-header-pc-nav-primary">
