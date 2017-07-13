@@ -12,19 +12,3 @@
     text-align: center;
   }
 }
-
-.global-footer-nav-wrapper {
-  padding: 16px;
-
-  .global-footer-nav {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    list-style-type: none;
-
-    .nav-item {
-      flex: auto;
-      text-align: center;
-    }
-  }
-}

@@ -1,23 +1,96 @@
 .global-popup-nav-wrapper {
   display: none;
+  // display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: $color-black;
+  color: $color-flavin;
+  font-family: sans-serif;
+  z-index: 10000;
+  overflow-y: auto;
+}
+
+.global-popup-nav {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 768px;
+
+  margin: 0 auto;
+  padding: 32px 32px 128px;
+  box-sizing: border-box;
+
+  .nav-item {
+    a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &.primary-nav {
+      font-family: 'Damion Regular';
+      font-size: 32px;
+
+      .nav-item {
+        &:not(:last-child) {
+          box-shadow: 0 2px $color-flavin;
+        }
+
+        a {
+          padding-top: 6px;
+          padding-bottom: 6px;
+          padding-left: 0;
+          transition: padding-left 0.1s;
+
+          &:hover {
+            padding-left: 24px;
+          }
+        }
+      }
+    }
+
+    &.secondary-nav {
+      display: flex;
+      flex-direction: row;
+      margin-top: 24px;
+
+      .nav-item {
+        flex: auto;
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+  }
 }
 
 .global-popup-nav-trigger {
   display: flex;
   position: fixed;
-  bottom: 48px;
-  left: 48px;
+  bottom: 36px;
+  left: 36px;
 
   align-items: center;
   justify-content: center;
 
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   border-radius: 12px;
 
   background-color: $color-flavin;
   color: $color-black;
   font-size: 28px;
+  z-index: 20000;
 
   .icon-menu-shown {
     display: none;
