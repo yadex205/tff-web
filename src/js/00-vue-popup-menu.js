@@ -15,18 +15,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
   new Vue({
     el: '#global-popup-nav',
-    data: { menuShown: false },
+    data: { shown: false, beforeHidden: false, _timeoutTransition: null },
     mounted: function() {
       document.addEventListener('tff-web:menu-shown', function() {
-        this.menuShown = true
+        this._cleanupTimeout()
+        this.shown = true
       }.bind(this))
 
       document.addEventListener('tff-web:menu-hidden', function() {
-        this.menuShown = false
+        this.beforeHidden = true
+        this.shown = false
+        this._timeoutTransition = setTimeout(function() {
+          this.beforeHidden = false
+          this._timeoutTransition = null
+        }.bind(this), 500)
       }.bind(this))
     },
     methods: {
-      onMenuShownStatusChanged: function(status) {
+      _cleanupTimeout: function() {
+        if (this._timeoutTransition) {
+          clearTimeout(this._timeoutTransition)
+          this._timeoutTransition = null
+        }
       }
     }
   })

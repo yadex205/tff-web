@@ -13,9 +13,9 @@
     </div> <!-- .global -->
 
     <!-- Popup menu -->
-    <nav :class="['global-popup-nav-wrapper', { 'menu-shown': menuShown }]"
+    <nav :class="['global-popup-nav-wrapper', { 'before-hidden': beforeHidden }, { 'shown': shown }]"
          id="global-popup-nav">
-      <div class="global-popup-nav">
+      <div :class="['global-popup-nav', { shown: shown }]">
         <ul class="primary-nav">
           <li class="nav-item"><a href="#">News</a></li>
           <li class="nav-item"><a href="#">Live</a></li>
