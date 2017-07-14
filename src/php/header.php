@@ -8,7 +8,7 @@
   </head>
   <body <?php body_class(); ?>>
     <!-- Theme global region -->
-    <div class="global">
+    <div class="global" id="global-region">
 
       <!-- Global header -->
       <header class="global-header-wrapper">

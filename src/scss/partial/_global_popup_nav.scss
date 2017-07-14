@@ -12,6 +12,10 @@
   font-family: sans-serif;
   z-index: 10000;
   overflow-y: auto;
+
+  &.menu-shown {
+    display: flex;
+  }
 }
 
 .global-popup-nav {
@@ -89,6 +93,7 @@
   background-color: $color-flavin;
   color: $color-black;
   font-size: 28px;
+  cursor: pointer;
   z-index: 20000;
 
   .icon-menu-shown {

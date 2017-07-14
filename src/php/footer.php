@@ -13,7 +13,8 @@
     </div> <!-- .global -->
 
     <!-- Popup menu -->
-    <nav class="global-popup-nav-wrapper">
+    <nav :class="['global-popup-nav-wrapper', { 'menu-shown': menuShown }]"
+         id="global-popup-nav">
       <div class="global-popup-nav">
         <ul class="primary-nav">
           <li class="nav-item"><a href="#">News</a></li>
@@ -31,10 +32,13 @@
     </nav>
 
     <!-- Popup menu trigger -->
-    <div class="global-popup-nav-trigger">
-      <span class="icon-menu-hidden"><i class="fa fa-th-list"></i></span>
-      <span class="icon-menu-shown"><i class="fa fa-times"></i></span>
-    </div> <!-- .global-popup-nav-trigger -->
+    <div id="global-popup-nav-trigger-wrapper">
+      <div :class="['global-popup-nav-trigger', { 'menu-shown': menuShown }]"
+           v-on:click="trigger">
+        <span class="icon-menu-hidden"><i class="fa fa-th-list"></i></span>
+        <span class="icon-menu-shown"><i class="fa fa-times"></i></span>
+      </div> <!-- .global-popup-nav-trigger -->
+    </div>
 
     <?php wp_footer(); ?>
   </body>
