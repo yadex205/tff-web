@@ -1,0 +1,9 @@
+@function ntsc-coef-grayscale ($original-color) {
+  $color: complement($original-color);
+  $amount: (77 * red($color) + 150 * green($color) + 29 * blue($color)) / 256;
+  @return rgb($amount, $amount, $amount);
+}
+
+$color-flavin: #dcdc42;
+$color-black: ntsc-coef-grayscale($color-flavin);
+$color-gray: lighten($color-black, 30%);
