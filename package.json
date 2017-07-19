@@ -25,9 +25,12 @@
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "bower": "^1.8.0",
+    "browser-sync": "^2.18.12",
+    "eslint": "^4.2.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
+    "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
     "gulp-responsive": "^2.7.1",
@@ -38,8 +41,5 @@
     "rimraf": "^2.6.1",
     "run-sequence": "^1.2.2",
     "sass-lint": "^1.10.2"
-  },
-  "dependencies": {
-    "browser-sync": "^2.18.12"
   }
 }
