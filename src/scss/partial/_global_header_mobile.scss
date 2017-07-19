@@ -1,0 +1,26 @@
+@media screen and (max-width: 640px) {
+  .global-header-wrapper {
+    padding: 14px 16px;
+  }
+
+  .global-header-pc-nav-primary {
+    display: none;
+  }
+
+  .global-header-secondary-row {
+    display: none;
+  }
+
+  .global-header-logo-wrapper {
+    width: 72px;
+    height: inherit;
+
+    &::before {
+      display: none;
+    }
+
+    .global-header-logo {
+      width: 72px;
+    }
+  }
+}

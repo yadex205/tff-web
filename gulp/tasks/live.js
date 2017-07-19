@@ -17,5 +17,6 @@ gulp.task('live:browser-sync', ['build'], () => {
     proxy: 'localhost:9090',
     notify: false,
     online: false,
+    reloadDelay: 20,
   })
 })

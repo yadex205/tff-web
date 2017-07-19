@@ -1,0 +1,14 @@
+.global-footer-wrapper {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.global-footer {
+  @include top-level-view;
+  font-size: 14px;
+
+  .copyright-wrapper {
+    padding: 16px;
+    text-align: center;
+  }
+}
