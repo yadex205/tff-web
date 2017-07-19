@@ -8,6 +8,7 @@
 
 const runSequence  = require('run-sequence')
 const plumber      = require('gulp-plumber')
+const notify       = require('gulp-notify')
 const sass         = require('gulp-sass')
 const concat       = require('gulp-concat')
 const sourcemaps   = require('gulp-sourcemaps')
@@ -45,12 +46,14 @@ gulp.task('build:src', [
 
 gulp.task('build:src:php', () => {
   gulp.src(SOURCE_PHP.toString())
+    .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(gulp.dest(DEST_PHP.toString()))
     .pipe(browserSync.stream())
 })
 
 gulp.task('build:src:scss', () => {
   gulp.src(SOURCE_SCSS.toString())
+    .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(gulpIf(!Node.env.isProduction, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
@@ -61,7 +64,7 @@ gulp.task('build:src:scss', () => {
 
 gulp.task('build:src:js', () => {
   gulp.src(SOURCE_JS.toString())
-    .pipe(plumber())
+    .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
     .pipe(gulpIf(!Node.env.isProduction, sourcemaps.init()))
     .pipe(concat('site.js'))
     .pipe(gulpIf(!Node.env.isProduction, sourcemaps.write()))
