@@ -1,3 +1,5 @@
+      </div> <!-- .page-content -->
+
       <!-- Global footer -->
       <footer class="global-footer-wrapper">
         <div class="global-footer">

@@ -25,6 +25,7 @@ gulp.task('build:src:image:global-header-logo', () => {
         { width: 300, rename: 'header-logo@3x.png' },
       ],
       'background.jpg': {},
+      'home-welcome.jpg': {},
     }, {
       errorOnUnusedImage: false, format: 'png', withoutEnlargement: false
     }))
