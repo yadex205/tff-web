@@ -4,11 +4,13 @@
       <footer class="global-footer-wrapper">
         <div class="global-footer">
 
-          <div class="copyright-wrapper">
-            <span class="copyright">
-              <a href="#"><i class="fa fa-file-code-o"></i> Site policy</a> |
+          <div class="copyright">
+            <div class="sitepolicy-link">
+              <a href="#"><i class="fa fa-file-code-o"></i> Site policy</a>
+            </div>
+            <div class="copyright-text">
               <i class="fa fa-copyright"></i> 2017 Three for Flavin.
-            </span>
+            </div>
           </div>
         </div>
       </footer> <!-- .global-footer-wrapper -->
