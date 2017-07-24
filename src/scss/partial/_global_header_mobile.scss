@@ -12,7 +12,7 @@
   }
 
   .global-header-logo-wrapper {
-    width: 72px;
+    width: 100%;
     height: inherit;
 
     &::before {
@@ -20,7 +20,9 @@
     }
 
     .global-header-logo {
+      display: block;
       width: 72px;
+      margin: 0 auto;
     }
   }
 }

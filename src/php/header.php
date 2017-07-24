@@ -42,3 +42,6 @@
 
         </div>
       </header> <!-- .global-header-wrapper -->
+
+      <!-- Page Content -->
+      <div class="page-content">

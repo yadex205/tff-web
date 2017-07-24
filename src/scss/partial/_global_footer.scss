@@ -7,8 +7,23 @@
   @include top-level-view;
   font-size: 14px;
 
-  .copyright-wrapper {
-    padding: 16px;
+  .copyright {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+      flex-flow: column;
+    }
+  }
+
+  .sitepolicy-link {
+    margin: 0 12px 12px 0;
+    text-align: center;
+  }
+
+  .copyright-text {
     text-align: center;
   }
 }

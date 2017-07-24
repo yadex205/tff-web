@@ -1,5 +1,6 @@
 <?php
 function threeforflavin_scripts() {
+    wp_enqueue_script( 'twitter-widget', '//platform.twitter.com/widgets.js' );
     if ( getenv( 'PHP_ENV' ) == 'development' ) {
         wp_enqueue_script( 'vue', get_vendor_uri() . '/vue/vue.js');
     } else {
