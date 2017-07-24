@@ -9,18 +9,38 @@ $welcome_image_uri = get_template_directory_uri() . '/image/home-welcome.jpg';
 </div>
 
 <div class="home-topics">
-  <div class="home-topics-item">
-    <header class="home-topics-item-header">
-      Live
-    </header>
-  </div>
-  <div class="home-topics-item">
-    <header class="home-topics-item-header">
+  <div class="home-topics-row">
+    <header class="home-topics-row-header">
       News
     </header>
+    <ul class="home-topics-row-content">
+      <?php foreach( get_news_posts( 5 ) as $post): setup_postdata( $post ); ?>
+        <li>
+          <a class="plain" href="<?php the_permalink(); ?>>">
+            <div class="date"><?php echo get_post_time( 'Y.m.d D' ); ?></div>
+            <div class="title"><?php the_title(); ?></div>
+          </a>
+        </li>
+      <?php endforeach; ?>
+    </ul>
   </div>
-  <div class="home-topics-item">
-    <header class="home-topics-item-header">
+  <div class="home-topics-row">
+    <header class="home-topics-row-header">
+      Live
+    </header>
+    <ul class="home-topics-row-content">
+      <?php foreach( get_scheduled_live_posts() as $post): setup_postdata( $post ); ?>
+        <li>
+          <a class="plain" href="<?php the_permalink(); ?>">
+            <div class="date"><?php echo get_post_time( 'Y.m.d D' ); ?></div>
+            <div class="title"><?php the_title(); ?></div>
+          </a>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+  </div>
+  <div class="home-topics-row">
+    <header class="home-topics-row-header">
       Tweet
     </header>
     <a class="twitter-timeline"

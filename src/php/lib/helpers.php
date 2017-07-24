@@ -15,3 +15,9 @@ function get_scheduled_live_posts( $tag = '', $limit = -1 ) {
                                'date_query'     => array( 'inclusive' => true, 'after' => date_i18n( 'Y/n/j' ) ) ) );
     return array_reverse( $posts );
 }
+
+function get_news_posts( $limit = -1 ) {
+    return get_posts( array( 'category_name'  =>  'news',
+                             'posts_per_page' => $limit,
+                             'post_status'    => 'publish' ) );
+}
