@@ -16,7 +16,7 @@ $welcome_image_uri = get_template_directory_uri() . '/image/home-welcome.jpg';
     <ul class="home-topics-row-content">
       <?php foreach( get_news_posts( 5 ) as $post): setup_postdata( $post ); ?>
         <li>
-          <a class="plain" href="<?php the_permalink(); ?>>">
+          <a class="plain" href="<?php the_permalink(); ?>">
             <div class="date"><?php echo get_post_time( 'Y.m.d D' ); ?></div>
             <div class="title"><?php the_title(); ?></div>
           </a>
