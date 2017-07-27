@@ -1,0 +1,40 @@
+.page-content {
+  .page-content-header {
+    padding: 0 24px 32px;
+    background-color: $color-flavin;
+
+    h1 {
+      @include top-level-view;
+      padding: 40px 0;
+      font-size: 48px;
+      font-weight: bold;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 40px;
+      }
+
+      @media screen and (max-width: 840px) {
+        font-size: 30px;
+      }
+
+      @media screen and (max-width: 640px) {
+        padding-top: 28px;
+        font-size: 20px;
+      }
+    }
+
+    h3 {
+      @include top-level-view;
+      padding: 4px 0;
+
+      @media screen and (max-width: 640px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .page-content-main {
+    @include top-level-view;
+    padding: 36px 24px 0;
+  }
+}
