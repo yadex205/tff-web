@@ -6,7 +6,7 @@
 
           <div class="copyright">
             <div class="sitepolicy-link">
-              <a href="#"><i class="fa fa-file-code-o"></i> Site policy</a>
+              <a href="/policy"><i class="fa fa-file-code-o"></i> Site policy</a>
             </div>
             <div class="copyright-text">
               <i class="fa fa-copyright"></i> 2017 Three for Flavin.
@@ -21,16 +21,16 @@
          id="global-popup-nav">
       <div :class="['global-popup-nav', { shown: shown }]">
         <ul class="primary-nav">
-          <li class="nav-item"><a href="#">News</a></li>
-          <li class="nav-item"><a href="#">Live</a></li>
-          <li class="nav-item"><a href="#">Works</a></li>
-          <li class="nav-item"><a href="#">Profile</a></li>
+          <li class="nav-item"><a href="/news">News</a></li>
+          <li class="nav-item"><a href="/live">Live</a></li>
+          <li class="nav-item"><a href="/works">Works</a></li>
+          <li class="nav-item"><a href="/profile">Profile</a></li>
         </ul>
 
         <ul class="secondary-nav">
-          <li class="nav-item">Top</li>
-          <li class="nav-item">Contact</li>
-          <li class="nav-item">Site policy</li>
+          <li class="nav-item"><a href="#">Top</a></li>
+          <li class="nav-item"><a href="#">Contact</a></li>
+          <li class="nav-item"><a href="#">Site policy</a></li>
         </ul>
       </div>
     </nav>
