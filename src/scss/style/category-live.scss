@@ -1,0 +1,47 @@
+@import '../colors';
+
+.global {
+  .page-content-main {
+    .live-schedule {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .live-schedule-item {
+      flex: content;
+      width: 50%;
+      margin: 12px 0;
+      padding: 12px 24px;
+      transition: background-color 0.1s;
+      border-radius: 12px;
+      color: inherit;
+      text-decoration: none;
+      box-sizing: border-box;
+
+      &:hover {
+        background-color: $color-flavin;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    .live-schedule-item-title {
+      margin-bottom: 12px;
+      border-bottom: 1px solid $color-black;
+      font-size: 24px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .live-schedule-item-date,
+    .live-schedule-item-place {
+      margin: 6px 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}

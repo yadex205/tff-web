@@ -1,0 +1,43 @@
+@import '../colors';
+
+.global {
+  .page-content-main {
+    .news-holder {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .news-item {
+      flex: content;
+      width: 50%;
+      margin: 12px 0;
+      padding: 12px 24px;
+      transition: background-color 0.1s;
+      border-radius: 12px;
+      color: inherit;
+      text-decoration: none;
+      box-sizing: border-box;
+
+      &:hover {
+        background-color: $color-flavin;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    .news-item-date {
+      margin: 6px 0;
+    }
+
+    .news-item-title {
+      padding: 12px 0;
+      border-top: 1px solid $color-black;
+      font-size: 20px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}

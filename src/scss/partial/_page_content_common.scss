@@ -36,5 +36,6 @@
   .page-content-main {
     @include top-level-view;
     padding: 36px 24px 0;
+    box-sizing: border-box;
   }
 }
