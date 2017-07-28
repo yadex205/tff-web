@@ -12,7 +12,7 @@
     <?php if ( in_category( 'live' ) ): ?>
       <h3>
         <i class="fa fa-lg fa-fw fa-map-marker"></i>
-        place
+        <?php echo get_post_custom()['place'][0] ?>
       </h3>
     <?php endif; ?>
   </header>

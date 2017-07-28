@@ -26,17 +26,17 @@
             </div>
 
             <ul class="global-header-pc-nav-primary">
-              <li class="nav-item"><a class="plain" href="#">News</a></li>
-              <li class="nav-item"><a class="plain" href="#">Live</a></li>
-              <li class="nav-item"><a class="plain" href="#">Works</a></li>
+              <li class="nav-item"><a class="plain" href="/news">News</a></li>
+              <li class="nav-item"><a class="plain" href="/live">Live</a></li>
+              <li class="nav-item"><a class="plain" href="/works">Works</a></li>
             </ul>
           </nav> <!-- .global-header-pc-nav-primary-row -->
 
           <nav class="global-header-secondary-row">
             <ul class="global-header-pc-nav-secondary">
-              <li class="nav-item"><a href="#">Top</a></li>
-              <li class="nav-item"><a href="#">Profile</a></li>
-              <li class="nav-item"><a href="#">Contact</a></li>
+              <li class="nav-item"><a href="/">Top</a></li>
+              <li class="nav-item"><a href="/profile">Profile</a></li>
+              <li class="nav-item"><a href="/contact">Contact</a></li>
             </ul>
           </nav> <!-- .global-header-pc-nav-secondary-row -->
 
