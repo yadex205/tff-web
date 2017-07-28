@@ -28,9 +28,9 @@
         </ul>
 
         <ul class="secondary-nav">
-          <li class="nav-item"><a href="#">Top</a></li>
-          <li class="nav-item"><a href="#">Contact</a></li>
-          <li class="nav-item"><a href="#">Site policy</a></li>
+          <li class="nav-item"><a href="/">Top</a></li>
+          <li class="nav-item"><a href="/contact">Contact</a></li>
+          <li class="nav-item"><a href="/policy">Site policy</a></li>
         </ul>
       </div>
     </nav>
