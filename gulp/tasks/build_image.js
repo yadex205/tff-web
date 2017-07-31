@@ -5,30 +5,20 @@
  * テーマディレクトリに配置するタスクです。
  */
 
-const plumber      = require('gulp-plumber')
-const responsive   = require('gulp-responsive')
+const plumber = require('gulp-plumber')
+const filter  = require('gulp-filter')
 
 const SRC_IMAGE_ROOT = Node.root.join('src/image')
 const THEME_IMAGE_ROOT = Node.root.join('theme/image')
 
 gulp.task('build:src:image', [
-  'build:src:image:global-header-logo',
+  'build:src:image:copy',
 ])
 
-gulp.task('build:src:image:global-header-logo', () => {
-  gulp.src(SRC_IMAGE_ROOT.join('*').toString())
+gulp.task('build:src:image:copy', () => {
+  return gulp.src(SRC_IMAGE_ROOT.join('*').toString())
     .pipe(plumber())
-    .pipe(responsive({
-      'tff-logo-short.svg': [
-        { width: 100, rename: 'header-logo.png' },
-        { width: 200, rename: 'header-logo@2x.png' },
-        { width: 300, rename: 'header-logo@3x.png' },
-      ],
-      'background.jpg': {},
-      'home-welcome.jpg': {},
-    }, {
-      errorOnUnusedImage: false, format: 'png', withoutEnlargement: false
-    }))
+    .pipe(filter(['**/*', '!**/*.svg']))
     .pipe(gulp.dest(THEME_IMAGE_ROOT.toString()))
     .pipe(browserSync.stream())
 })
