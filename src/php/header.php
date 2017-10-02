@@ -35,6 +35,7 @@
           <nav class="global-header-secondary-row">
             <ul class="global-header-pc-nav-secondary">
               <li class="nav-item"><a href="/">Top</a></li>
+              <li class="nav-item"><a href="/movies"><i class="fa fa-youtube-play"></i> Movies</a></li>
               <li class="nav-item"><a href="/profile">Profile</a></li>
               <li class="nav-item"><a href="/contact">Contact</a></li>
             </ul>
