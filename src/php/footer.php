@@ -24,6 +24,7 @@
           <li class="nav-item"><a href="/news">News</a></li>
           <li class="nav-item"><a href="/live">Live</a></li>
           <li class="nav-item"><a href="/works">Works</a></li>
+          <li class="nav-item"><a href="/movies">Movies</a></li>
           <li class="nav-item"><a href="/profile">Profile</a></li>
         </ul>
 
